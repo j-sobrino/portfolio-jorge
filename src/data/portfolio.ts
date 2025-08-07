@@ -1,130 +1,166 @@
 // Centralized portfolio content for easy edits
-// Update this file to change your portfolio data in one place.
 
 export const profile = {
   name: "Jorge Sobrino Fernández-Miranda",
-  role: "Software Engineering Student",
-  tagline: "Building reliable, user-first software. Seeking Summer '26 internships.",
+  role: "MEng Maths & CS @ Imperial",
+  tagline: "Building performant software systems. Seeking Summer '26 internships.",
   location: "London, UK",
   links: {
     github: "https://github.com/yourhandle",
-    linkedin: "https://www.linkedin.com/in/yourhandle/",
-    email: "mailto:you@example.com",
+    linkedin: "https://www.linkedin.com/in/jorge-sobrino/",
+    email: "mailto:jsobrinofm@gmail.com",
   },
-};
-
-export type ExperienceItem = {
-  company: string;
-  role: string;
-  period: string;
-  points: string[];
-  logo: string;
 };
 
 import thoughtMachineLogo from "@/assets/thought-machine-logo.png";
 import bitcodeLogo from "@/assets/bitcode-logo.png";
-
-export const experience: ExperienceItem[] = [
-  {
-    company: "Thought Machine",
-    role: "Software Engineering Intern",
-    period: "Jun 2024 – Aug 2024",
-    logo: thoughtMachineLogo,
-    points: [
-      "Built a fast React UI with type-safe APIs.",
-      "Improved load times by ~30% via code-splitting and caching.",
-      "Wrote unit tests and added CI checks for reliability.",
-    ],
-  },
-  {
-    company: "Bitcode Technology SLU",
-    role: "Research Assistant",
-    period: "Jan 2024 – May 2024",
-    logo: bitcodeLogo,
-    points: [
-      "Prototyped data pipelines and visualizations.",
-      "Collaborated in a small team with agile rituals.",
-    ],
-  },
-];
-
-export type ProjectItem = {
-  title: string;
-  blurb: string;
-  repoUrl: string;
-  image: string;
-  details: string;
-  stack: string[];
-};
-
+import imperialLogo from "@/assets/imperial-logo.png";
+import profilePhoto from "@/assets/foto-jorge.jfif";
 import projectStudy from "@/assets/project-study-planner.jpg";
 import projectBanking from "@/assets/project-mobile-banking.jpg";
 import projectChat from "@/assets/project-realtime-chat.jpg";
-import imperialLogo from "@/assets/imperial-logo.png";
-import profilePhoto from "@/assets/foto-jorge.jfif";
+import projectOpenWebUI from "@/assets/open-webui-home.png";
+import projectReRoute from "@/assets/reroute.png";
+import projectOsstrack from "@/assets/osstrack.png";
 
 export const profileImage = profilePhoto;
 
-export const projects: ProjectItem[] = [
+export const experience = [
   {
-    title: "Wacc Compiler",
-    blurb: "Full-stack compiler development with functional programming.",
-    repoUrl: "https://github.com/yourhandle/wacc-compiler",
-    image: projectStudy, // Using placeholder image for now
-    details:
-      "Developed a full-stack compiler for the Wacc language, implementing both the front-end (lexical analysis, parsing, semantic validation) and back-end (internal program representation, error handling, and optimization) using Scala (Parsley). Collaborated in a team of 4, leveraging GitLab CI/CD, automated testing, and agile workflows to ensure code quality, maintainability, and efficient integration of new features.",
-    stack: ["Scala", "Parsley", "GitLab CI/CD", "Functional Programming"],
+    company: "Thought Machine",
+    role: "Software Engineering Intern — Vault Bridge Team",
+    period: "Jul 2025 – Sep 2025",
+    logo: thoughtMachineLogo,
+    points: [
+      "Developed an end-to-end data pipeline using Kafka, ElasticSearch, Go, and gRPC.",
+      "Enabled 250M+ accounts to be queried via a new Rich Query API.",
+      "Shipped Bridge API and index migration tooling with Kubernetes deployment.",
+      "Accelerated Vault’s ecosystem by unblocking integrations and advanced user journeys.",
+    ],
   },
   {
-    title: "AI Study Planner",
-    blurb: "Plan smarter with adaptive schedules and progress insights.",
-    repoUrl: "https://github.com/yourhandle/ai-study-planner",
-    image: projectStudy,
-    details:
-      "I built an AI-assisted planner that generates study blocks based on deadlines and focus windows, with progress charts and reminders.",
-    stack: ["React", "TypeScript", "Tailwind", "OpenAI API"],
-  },
-  {
-    title: "Mobile Banking UI",
-    blurb: "Clean finance flows with transfers and analytics.",
-    repoUrl: "https://github.com/yourhandle/mobile-banking-ui",
-    image: projectBanking,
-    details:
-      "A responsive, accessible banking interface prototype featuring transaction history, insights, and money movement flows.",
-    stack: ["React", "TypeScript", "Radix", "Recharts"],
-  },
-  {
-    title: "Realtime Chat",
-    blurb: "Typing indicators, presence, and channels.",
-    repoUrl: "https://github.com/yourhandle/realtime-chat",
-    image: projectChat,
-    details:
-      "A performant chat experience with channel lists, message threads, and presence indicators.",
-    stack: ["React", "TypeScript", "WebSocket"],
+    company: "Bitcode Technology SL",
+    role: "Software Engineering Intern",
+    period: "Dec 2024 – Jan 2025",
+    logo: bitcodeLogo,
+    points: [
+      "Built a C# payroll automation tool reducing processing time by 95%.",
+      "Migrated backend from SQL Server to SQLite for lightweight deployment.",
+      "Implemented encrypted payroll distribution and tested key logic components.",
+      "Researched licensing strategies for SME rollout.",
+    ],
   },
 ];
 
-export type EducationItem = {
-  school: string;
-  degree: string;
-  period: string;
-  notes?: string;
-  logo?: string;
-};
+export const projects = [
+  {
+    title: "DSL AI — Natural Language Interface for Financial DSLs",
+    blurb: "LLM-driven tooling for designing financial products in natural language.",
+    repoUrl: "https://github.com/yourhandle/dsl-ai",
+    image: projectStudy,
+    details:
+      "Prototyping an AI-powered platform that converts structured English into DSL code for financial product configuration. Targeting faster iteration, documentation, and testing.",
+    stack: ["LLMs", "Prompt Engineering", "NLP", "Software Design"],
+  },
+  {
+    title: "Local LLM Server & RAG Stack",
+    blurb: "Private AI infrastructure with local inference and retrieval-augmented generation.",
+    repoUrl: "https://github.com/yourhandle/rag-stack",
+    image: projectOpenWebUI,
+    details:
+      "Built a secure, self-hosted LLM backend with Ollama + Docker for SMEs, integrating local RAG capabilities. Prioritized data privacy and on-prem control.",
+    stack: ["Ollama", "Docker", "LLMs", "TypeScript", "RAG"],
+  },
+  {
+    title: "ReRoute — Health-First Navigation App",
+    blurb: "Award-winning app promoting walkable commutes.",
+    repoUrl: "https://github.com/yourhandle/reroute",
+    image: projectReRoute,
+    details:
+      "Led UI/UX design for a navigation app encouraging walking to combat prediabetes. Informed by 50+ user interviews. Won Imperial’s 2nd Year Project competition + Amadeus Prize.",
+    stack: ["Figma", "React Native", "User Research", "HealthTech"],
+  },
+  {
+    title: "Osstrack — Bone Health with Ultrasound AI",
+    blurb: "Hackathon-winning tool to assess osteoporosis risk using ultrasound and ML.",
+    repoUrl: "https://github.com/yourhandle/osstrack",
+    image: projectOsstrack,
+    details:
+      "Built a deep-learning diagnostic interface using ultrasound images to assess bone density. Won Longevity x AI hackathon. Designed UI with Cursor AI and Lovable.",
+    stack: ["Deep Learning", "Python", "Cursor AI", "Lovable", "UX Design"],
+  },
+];
 
-export const education: EducationItem[] = [
+export const education = [
   {
     school: "Imperial College London",
-    degree: "B.S. in Computer Science",
-    period: "2022 – 2026",
-    notes: "Relevant coursework: Algorithms, Systems, Databases, HCI",
+    degree: "MEng Mathematics and Computer Science",
+    period: "2023 – 2027",
+    notes: "First Class Honours. Modules: Graphs & Algorithms, SE Design, Symbolic Reasoning, Operating Systems.",
     logo: imperialLogo,
+  },
+  {
+    school: "British Council School of Madrid",
+    degree: "Título de Bachiller",
+    period: "2021 – 2023",
+    notes: "9.9 GPA. 6 Honours. Finalist in Declamation contest on AI & digital ethics.",
+  },
+  {
+    school: "Mathematical Thinking School Miguel de Guzmán (EPM)",
+    degree: "Advanced Math Programme",
+    period: "2012 – 2023",
+    notes: "Weekly math lectures, robotics labs, ethical hacking course.",
   },
 ];
 
 export const languages = [
-  { name: "Spanish", level: "Native", flag: "🇪🇸" },
-  { name: "English", level: "Native", flag: "🇬🇧" },
-  { name: "French", level: "Bilingual", flag: "🇫🇷" },
-  { name: "Chinese", level: "Basic", flag: "🇨🇳" },
+  { name: "Spanish", level: "Native", flag: "🇪🇸", countryCode: "es" },
+  { name: "English", level: "Native (C2 - Grade A)", flag: "🇬🇧", countryCode: "gb" },
+  { name: "French", level: "Bilingual", flag: "🇫🇷", countryCode: "fr" },
+  { name: "Chinese", level: "Basic (HSK2)", flag: "🇨🇳", countryCode: "cn" },
+];
+
+export const techSkills = {
+  languages: ["Python", "Go", "Java", "Kotlin", "C#", "C", "Scala", "JavaScript", "Haskell"],
+  tools: ["Git", "CI/CD", "Kubernetes", "Kafka", "ElasticSearch", "Docker", "gRPC", "SQLite"],
+  web: ["HTML", "CSS", "JavaScript", "Cursor AI", "Lovable"],
+};
+
+export const awards = [
+  {
+    title: "1st Place, Imperial 2nd Year Project Competition",
+    org: "Imperial College London",
+    date: "May 2025",
+    details: "Won Amadeus Prize for 'ReRoute'. Selected by Amazon for mentorship.",
+  },
+  {
+    title: "1st Place, Longevity x AI Hackathon",
+    org: "Longevity & AI",
+    date: "May 2025",
+    details: "Built Osstrack. £2K cash prize + £5K cloud credits.",
+  },
+  {
+    title: "Silver Medal, Spanish Math Olympiad Regionals",
+    org: "RSME",
+    date: "June 2023",
+    details: "Top ranking in problem-solving (algebra, combinatorics, geometry).",
+  },
+];
+
+export const volunteering = [
+  {
+    title: "President, Imperial Spanish Society",
+    period: "2025 – 2026",
+    details: "Led 200+ member society. Coordinated events, sponsorships, and engagement.",
+  },
+  {
+    title: "Volunteering in Chame, Panama (ONGVoluntariado)",
+    period: "Aug – Sep 2024",
+    details: "Led PE workshops. Tutored children with learning difficulties.",
+  },
+  {
+    title: "Red Cross Madrid",
+    period: "2020 – 2024",
+    details: "Led youth education workshops. Contributed to flood relief and aid campaigns.",
+  },
 ];
