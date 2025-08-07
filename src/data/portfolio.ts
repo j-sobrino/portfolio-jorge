@@ -67,6 +67,15 @@ export const profileImage = profilePhoto;
 
 export const projects: ProjectItem[] = [
   {
+    title: "Wacc Compiler",
+    blurb: "Full-stack compiler development with functional programming.",
+    repoUrl: "https://github.com/yourhandle/wacc-compiler",
+    image: projectStudy, // Using placeholder image for now
+    details:
+      "Developed a full-stack compiler for the Wacc language, implementing both the front-end (lexical analysis, parsing, semantic validation) and back-end (internal program representation, error handling, and optimization) using Scala (Parsley). Collaborated in a team of 4, leveraging GitLab CI/CD, automated testing, and agile workflows to ensure code quality, maintainability, and efficient integration of new features.",
+    stack: ["Scala", "Parsley", "GitLab CI/CD", "Functional Programming"],
+  },
+  {
     title: "AI Study Planner",
     blurb: "Plan smarter with adaptive schedules and progress insights.",
     repoUrl: "https://github.com/yourhandle/ai-study-planner",
