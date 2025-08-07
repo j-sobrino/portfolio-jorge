@@ -29,16 +29,27 @@ const Index = () => {
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {experience.map((exp) => (
               <article key={`${exp.company}-${exp.role}`} className="rounded-lg border border-border bg-card/50 p-5 hover-lift">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold">{exp.role}</h3>
-                  <span className="text-xs text-muted-foreground">{exp.period}</span>
+                <div className="flex items-start gap-4">
+                  {exp.logo && (
+                    <img 
+                      src={exp.logo} 
+                      alt={`${exp.company} logo`}
+                      className="h-12 w-12 object-contain flex-shrink-0"
+                    />
+                  )}
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-lg font-semibold">{exp.role}</h3>
+                      <span className="text-xs text-muted-foreground">{exp.period}</span>
+                    </div>
+                    <p className="mt-1 text-sm text-muted-foreground">{exp.company}</p>
+                    <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+                      {exp.points.map((p, i) => (
+                        <li key={i}>{p}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <p className="mt-1 text-sm text-muted-foreground">{exp.company}</p>
-                <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
-                  {exp.points.map((p, i) => (
-                    <li key={i}>{p}</li>
-                  ))}
-                </ul>
               </article>
             ))}
           </div>
@@ -59,12 +70,23 @@ const Index = () => {
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {education.map((ed) => (
               <article key={`${ed.school}-${ed.degree}`} className="rounded-lg border border-border bg-card/50 p-5 hover-lift">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold">{ed.school}</h3>
-                  <span className="text-xs text-muted-foreground">{ed.period}</span>
+                <div className="flex items-start gap-4">
+                  {ed.logo && (
+                    <img 
+                      src={ed.logo} 
+                      alt={`${ed.school} logo`}
+                      className="h-12 w-12 object-contain flex-shrink-0"
+                    />
+                  )}
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-lg font-semibold">{ed.school}</h3>
+                      <span className="text-xs text-muted-foreground">{ed.period}</span>
+                    </div>
+                    <p className="mt-1 text-sm text-muted-foreground">{ed.degree}</p>
+                    {ed.notes && <p className="mt-2 text-sm text-muted-foreground">{ed.notes}</p>}
+                  </div>
                 </div>
-                <p className="mt-1 text-sm text-muted-foreground">{ed.degree}</p>
-                {ed.notes && <p className="mt-2 text-sm text-muted-foreground">{ed.notes}</p>}
               </article>
             ))}
           </div>

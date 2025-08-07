@@ -61,7 +61,7 @@ import projectStudy from "@/assets/project-study-planner.jpg";
 import projectBanking from "@/assets/project-mobile-banking.jpg";
 import projectChat from "@/assets/project-realtime-chat.jpg";
 import imperialLogo from "@/assets/imperial-logo.png";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/foto-jorge.jfif";
 
 export const profileImage = profilePhoto;
 
