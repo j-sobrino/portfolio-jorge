@@ -62,6 +62,29 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Option 1: GitHub Pages (Recommended)
+
+This project is configured for automatic deployment to GitHub Pages. Follow these steps:
+
+1. **Push your code to GitHub** (if not already done)
+2. **Enable GitHub Pages**:
+   - Go to your repository on GitHub
+   - Navigate to Settings → Pages
+   - Under "Source", select "Deploy from a branch"
+   - Choose "gh-pages" branch and "/ (root)" folder
+   - Click "Save"
+
+3. **Automatic Deployment**: Every time you push to the `main` branch, GitHub Actions will automatically build and deploy your site.
+
+4. **Manual Deployment** (if needed):
+   ```sh
+   npm run deploy
+   ```
+
+Your site will be available at: `https://<your-username>.github.io/portfolio-jorge2/`
+
+### Option 2: Lovable
+
 Simply open [Lovable](https://lovable.dev/projects/7f395049-2279-44c6-9029-ee31515d627e) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
