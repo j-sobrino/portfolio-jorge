@@ -18,16 +18,25 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           className="group relative cursor-pointer overflow-hidden rounded-lg border border-border bg-card/50 shadow-sm transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           aria-label={`Open details for ${project.title}`}
         >
-          <img
-            src={project.image}
-            alt={`${project.title} project preview screenshot`}
-            loading="lazy"
-            className="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-          <div className="absolute bottom-0 left-0 right-0 p-4">
+          <div className="relative">
+            <img
+              src={project.image}
+              alt={`${project.title} project preview screenshot`}
+              loading="lazy"
+              className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+          </div>
+          <div className="p-4 space-y-3">
             <h3 className="text-lg font-semibold">{project.title}</h3>
-            <p className="mt-1 text-sm text-muted-foreground">{project.blurb}</p>
+            <p className="text-sm text-muted-foreground">{project.blurb}</p>
+            <div className="flex flex-wrap gap-1">
+              {project.stack.map((tech) => (
+                <span key={tech} className="px-2 py-1 text-xs bg-secondary text-secondary-foreground rounded-md">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </article>
       </DialogTrigger>

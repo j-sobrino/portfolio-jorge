@@ -1,16 +1,23 @@
 import SocialLinks from "@/components/SocialLinks";
 import ProjectCard from "@/components/ProjectCard";
-import { profile, experience, projects, education, languages } from "@/data/portfolio";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { profile, experience, projects, education, languages, profileImage } from "@/data/portfolio";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-ambient">
       <header className="container mx-auto px-4 py-10">
         <div className="flex items-start justify-between gap-6">
-          <div>
-            <p className="text-sm text-muted-foreground">{profile.role}</p>
-            <h1 className="mt-1 text-3xl font-bold tracking-tight">Software Engineering Internship Portfolio</h1>
-            <p className="mt-3 max-w-2xl text-muted-foreground">{profile.tagline}</p>
+          <div className="flex items-start gap-6">
+            <Avatar className="h-24 w-24">
+              <AvatarImage src={profileImage} alt={profile.name} />
+              <AvatarFallback>{profile.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+            </Avatar>
+            <div>
+              <p className="text-sm text-muted-foreground">{profile.role}</p>
+              <h1 className="mt-1 text-3xl font-bold tracking-tight">{profile.name}</h1>
+              <p className="mt-3 max-w-2xl text-muted-foreground">{profile.tagline}</p>
+            </div>
           </div>
           <SocialLinks />
         </div>

@@ -2,10 +2,10 @@
 // Update this file to change your portfolio data in one place.
 
 export const profile = {
-  name: "Your Name",
+  name: "Jorge Sobrino Fernández-Miranda",
   role: "Software Engineering Student",
   tagline: "Building reliable, user-first software. Seeking Summer '26 internships.",
-  location: "City, Country",
+  location: "London, UK",
   links: {
     github: "https://github.com/yourhandle",
     linkedin: "https://www.linkedin.com/in/yourhandle/",
@@ -18,13 +18,18 @@ export type ExperienceItem = {
   role: string;
   period: string;
   points: string[];
+  logo: string;
 };
+
+import thoughtMachineLogo from "@/assets/thought-machine-logo.png";
+import bitcodeLogo from "@/assets/bitcode-logo.png";
 
 export const experience: ExperienceItem[] = [
   {
-    company: "Tech Labs",
+    company: "Thought Machine",
     role: "Software Engineering Intern",
     period: "Jun 2024 – Aug 2024",
+    logo: thoughtMachineLogo,
     points: [
       "Built a fast React UI with type-safe APIs.",
       "Improved load times by ~30% via code-splitting and caching.",
@@ -32,9 +37,10 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    company: "University Research",
+    company: "Bitcode Technology SLU",
     role: "Research Assistant",
     period: "Jan 2024 – May 2024",
+    logo: bitcodeLogo,
     points: [
       "Prototyped data pipelines and visualizations.",
       "Collaborated in a small team with agile rituals.",
@@ -54,6 +60,10 @@ export type ProjectItem = {
 import projectStudy from "@/assets/project-study-planner.jpg";
 import projectBanking from "@/assets/project-mobile-banking.jpg";
 import projectChat from "@/assets/project-realtime-chat.jpg";
+import imperialLogo from "@/assets/imperial-logo.png";
+import profilePhoto from "@/assets/profile-photo.jpg";
+
+export const profileImage = profilePhoto;
 
 export const projects: ProjectItem[] = [
   {
@@ -90,20 +100,22 @@ export type EducationItem = {
   degree: string;
   period: string;
   notes?: string;
+  logo?: string;
 };
 
 export const education: EducationItem[] = [
   {
-    school: "Your University",
+    school: "Imperial College London",
     degree: "B.S. in Computer Science",
     period: "2022 – 2026",
     notes: "Relevant coursework: Algorithms, Systems, Databases, HCI",
+    logo: imperialLogo,
   },
 ];
 
 export const languages = [
-  { name: "Spanish", level: "Native" },
-  { name: "English", level: "Native" },
-  { name: "French", level: "Bilingual" },
-  { name: "Chinese", level: "Basic" },
+  { name: "Spanish", level: "Native", flag: "🇪🇸" },
+  { name: "English", level: "Native", flag: "🇬🇧" },
+  { name: "French", level: "Bilingual", flag: "🇫🇷" },
+  { name: "Chinese", level: "Basic", flag: "🇨🇳" },
 ];
