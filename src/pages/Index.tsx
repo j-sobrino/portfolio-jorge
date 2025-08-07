@@ -21,6 +21,19 @@ const Index = () => {
           </div>
           <SocialLinks />
         </div>
+        
+        <section className="container mx-auto px-4 py-6">
+          <div className="flex flex-wrap gap-2">
+            {languages.map((l) => (
+              <span key={l.name} className="flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-2 text-sm shadow-sm">
+                <span className="text-base">{l.flag}</span>
+                <span className="font-medium">{l.name}</span>
+                <span className="text-muted-foreground">—</span>
+                <span className="text-muted-foreground">{l.level}</span>
+              </span>
+            ))}
+          </div>
+        </section>
       </header>
 
       <main>
@@ -92,16 +105,6 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="languages" className="container mx-auto px-4 py-12">
-          <h2 className="text-2xl font-semibold tracking-tight">Languages</h2>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {languages.map((l) => (
-              <span key={l.name} className="rounded-full border border-border bg-secondary px-3 py-1 text-sm text-secondary-foreground">
-                {l.name} — {l.level}
-              </span>
-            ))}
-          </div>
-        </section>
       </main>
 
       <footer className="border-t border-border/60 bg-background/70">
