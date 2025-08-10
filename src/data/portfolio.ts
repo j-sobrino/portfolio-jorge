@@ -3,7 +3,7 @@
 export const profile = {
   name: "Jorge Sobrino Fernández-Miranda",
   role: "MEng Maths & CS @ Imperial",
-  tagline: "Building performant software systems. Seeking Summer '26 internships.",
+  tagline: "Focused on large language models and building AI-powered tools. Seeking to make a career in LLM technology.",
   location: "London, UK",
   links: {
     github: "https://github.com/yourhandle",
@@ -15,6 +15,7 @@ export const profile = {
 import thoughtMachineLogo from "@/assets/thought-machine-logo.png";
 import bitcodeLogo from "@/assets/bitcode-logo.png";
 import imperialLogo from "@/assets/imperial-logo.png";
+import googleLogo from "@/assets/google-logo.png";
 import profilePhoto from "@/assets/foto-jorge.jfif";
 import projectStudy from "@/assets/project-study-planner.jpg";
 import projectBanking from "@/assets/project-mobile-banking.jpg";
@@ -98,6 +99,13 @@ export const education = [
     period: "2023 – 2027",
     notes: "First Class Honours. Modules: Graphs & Algorithms, SE Design, Symbolic Reasoning, Operating Systems.",
     logo: imperialLogo,
+  },
+  {
+    school: "Google",
+    degree: "Machine Learning Course",
+    period: "2024",
+    notes: "Completed to learn the mathematical foundations and theoretical background behind large language models.",
+    logo: googleLogo,
   },
   {
     school: "British Council School of Madrid",
