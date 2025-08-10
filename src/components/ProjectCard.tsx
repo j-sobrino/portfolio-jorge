@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Globe } from "lucide-react";
+import { ExternalLink, Github, Globe, Award } from "lucide-react";
 import type { ProjectItem } from "@/data/portfolio";
 
 interface ProjectCardProps {
@@ -26,6 +26,28 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
               className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+            {project.award && (
+              <div className="absolute top-2 left-2 bg-amber-500/90 text-amber-50 px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1">
+                <Award className="h-3 w-3" />
+                Winner
+              </div>
+            )}
+            <div className="absolute top-2 right-2 flex gap-1">
+              {project.websiteUrl && (
+                <Button size="icon" variant="secondary" className="h-8 w-8" asChild>
+                  <a href={project.websiteUrl} target="_blank" rel="noreferrer noopener" aria-label={`Visit ${project.title} website`} onClick={(e) => e.stopPropagation()}>
+                    <Globe className="h-3 w-3" />
+                  </a>
+                </Button>
+              )}
+              {project.repoUrl && (
+                <Button size="icon" variant="secondary" className="h-8 w-8" asChild>
+                  <a href={project.repoUrl} target="_blank" rel="noreferrer noopener" aria-label={`Open repository for ${project.title}`} onClick={(e) => e.stopPropagation()}>
+                    <Github className="h-3 w-3" />
+                  </a>
+                </Button>
+              )}
+            </div>
           </div>
           <div className="p-4 space-y-3">
             <h3 className="text-lg font-semibold">{project.title}</h3>
@@ -47,12 +69,20 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           <DialogDescription>{project.blurb}</DialogDescription>
         </DialogHeader>
         <div className="space-y-4">
-          <img
-            src={project.image}
-            alt={`${project.title} detailed screenshot`}
-            loading="lazy"
-            className="h-56 w-full rounded-md object-cover"
-          />
+          <div className="relative">
+            <img
+              src={project.image}
+              alt={`${project.title} detailed screenshot`}
+              loading="lazy"
+              className="h-56 w-full rounded-md object-cover"
+            />
+            {project.award && (
+              <div className="absolute top-2 left-2 bg-amber-500 text-amber-50 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-2">
+                <Award className="h-4 w-4" />
+                {project.award}
+              </div>
+            )}
+          </div>
           <p className="text-sm text-muted-foreground">{project.details}</p>
           <div className="flex flex-wrap items-center gap-2">
             {project.stack.map((s) => (

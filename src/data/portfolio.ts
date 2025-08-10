@@ -61,6 +61,7 @@ export interface ProjectItem {
   image: string;
   details: string;
   stack: string[];
+  award?: string;
 }
 
 export const projects: ProjectItem[] = [
@@ -86,11 +87,12 @@ export const projects: ProjectItem[] = [
   {
     title: "ReRoute — Health-First Navigation App",
     blurb: "Award-winning app promoting walkable commutes.",
-    repoUrl: "https://github.com/yourhandle/reroute",
+    websiteUrl: "https://reroute-app.netlify.app",
     image: projectReRoute,
     details:
       "Led UI/UX design for a navigation app encouraging walking to combat prediabetes. Informed by 50+ user interviews. Won Imperial’s 2nd Year Project competition + Amadeus Prize.",
     stack: ["Figma", "React Native", "User Research", "HealthTech"],
+    award: "1st Place - Imperial 2nd Year Project + Amadeus Prize",
   },
   {
     title: "Osstrack — Bone Health with Ultrasound AI",
@@ -100,6 +102,7 @@ export const projects: ProjectItem[] = [
     details:
       "Built a deep-learning diagnostic interface using ultrasound images to assess bone density. Won Longevity x AI hackathon. Designed UI with Cursor AI and Lovable.",
     stack: ["Deep Learning", "Python", "Cursor AI", "Lovable", "UX Design"],
+    award: "1st Place - Longevity x AI Hackathon",
   },
 ];
 
@@ -117,6 +120,7 @@ export const education = [
     period: "2024",
     notes: "Completed to learn the mathematical foundations and theoretical background behind large language models.",
     logo: googleLogo,
+    link: "https://developers.google.com/machine-learning/crash-course",
   },
   {
     school: "British Council School of Madrid",

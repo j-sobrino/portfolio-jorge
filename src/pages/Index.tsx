@@ -98,24 +98,25 @@ const Index = () => {
         <section id="education" className="container mx-auto px-4 py-12">
           <h2 className="text-2xl font-semibold tracking-tight">Education</h2>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
-            {education.map((ed) => (
-              <article key={`${ed.school}-${ed.degree}`} className="rounded-lg border border-border bg-card/50 p-5 hover-lift">
-                <div className="flex items-start gap-4">
-                  {ed.logo && (
-                    <img 
-                      src={ed.logo} 
-                      alt={`${ed.school} logo`}
-                      className="h-12 w-12 object-contain flex-shrink-0"
-                    />
-                  )}
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-lg font-semibold">{ed.school}</h3>
-                      <span className="text-xs text-muted-foreground">{ed.period}</span>
+            {education.map((item) => (
+              <article key={item.school} className="rounded-lg border border-border bg-card/50 p-5 hover-lift">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    {item.logo && (
+                      <img src={item.logo} alt={item.school} className="h-8 w-8 rounded object-contain" />
+                    )}
+                    <div>
+                      <h3 className="font-semibold">{item.school}</h3>
+                      <p className="text-sm text-muted-foreground">{item.period}</p>
                     </div>
-                    <p className="mt-1 text-sm text-muted-foreground">{ed.degree}</p>
-                    {ed.notes && <p className="mt-2 text-sm text-muted-foreground">{ed.notes}</p>}
                   </div>
+                  <h4 className="font-medium">{item.degree}</h4>
+                  <p className="text-sm text-muted-foreground">{item.notes}</p>
+                  {"link" in item && item.link && (
+                    <a href={item.link} target="_blank" rel="noreferrer noopener" className="text-sm text-primary hover:underline">
+                      View Course →
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
