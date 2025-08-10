@@ -69,6 +69,12 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           <DialogDescription>{project.blurb}</DialogDescription>
         </DialogHeader>
         <div className="space-y-4">
+          {project.award && (
+            <div className="bg-amber-500 text-amber-50 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-2 w-fit">
+              <Award className="h-4 w-4" />
+              {project.award}
+            </div>
+          )}
           <div className="relative">
             <img
               src={project.image}
@@ -76,12 +82,6 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
               loading="lazy"
               className="h-56 w-full rounded-md object-cover"
             />
-            {project.award && (
-              <div className="absolute top-2 left-2 bg-amber-500 text-amber-50 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-2">
-                <Award className="h-4 w-4" />
-                {project.award}
-              </div>
-            )}
           </div>
           <p className="text-sm text-muted-foreground">{project.details}</p>
           <div className="flex flex-wrap items-center gap-2">

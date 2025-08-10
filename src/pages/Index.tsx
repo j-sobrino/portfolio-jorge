@@ -101,22 +101,24 @@ const Index = () => {
             {education.map((item) => (
               <article key={item.school} className="rounded-lg border border-border bg-card/50 p-5 hover-lift">
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    {item.logo && (
-                      <img src={item.logo} alt={item.school} className="h-8 w-8 rounded object-contain" />
-                    )}
-                    <div>
-                      <h3 className="font-semibold">{item.school}</h3>
-                      <p className="text-sm text-muted-foreground">{item.period}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      {item.logo && (
+                        <img src={item.logo} alt={item.school} className="h-8 w-8 rounded object-contain" />
+                      )}
+                      <div>
+                        <h3 className="font-semibold">{item.school}</h3>
+                        <p className="text-sm text-muted-foreground">{item.period}</p>
+                      </div>
                     </div>
+                    {"link" in item && item.link && (
+                      <a href={item.link} target="_blank" rel="noreferrer noopener" className="text-sm text-primary hover:underline">
+                        View Course →
+                      </a>
+                    )}
                   </div>
                   <h4 className="font-medium">{item.degree}</h4>
                   <p className="text-sm text-muted-foreground">{item.notes}</p>
-                  {"link" in item && item.link && (
-                    <a href={item.link} target="_blank" rel="noreferrer noopener" className="text-sm text-primary hover:underline">
-                      View Course →
-                    </a>
-                  )}
                 </div>
               </article>
             ))}

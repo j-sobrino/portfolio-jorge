@@ -2,8 +2,8 @@
 
 export const profile = {
   name: "Jorge Sobrino Fernández-Miranda",
-  role: "MEng Maths & CS @ Imperial",
-  tagline: "Computer engineering and Mathematics background, now breaking into AI tooling. Focused on large language models and building AI-powered tools.",
+  role: "BEng Maths & CS @ Imperial",
+  tagline: "Computer Engineering and Mathematics background, now breaking into AI tooling. Focused on large language models and building AI-powered tools.",
   location: "London, UK",
   links: {
     github: "https://github.com/yourhandle",
@@ -66,7 +66,7 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
-    title: "DSL AI — Natural Language Interface for Financial DSLs",
+    title: "DSL AI — Natural Language Interface for building Financial Products",
     blurb: "LLM-driven tooling for designing financial products in natural language.",
     repoUrl: "https://github.com/yourhandle/dsl-ai",
     websiteUrl: "https://dsl-ai-demo.vercel.app",
@@ -76,28 +76,29 @@ export const projects: ProjectItem[] = [
     stack: ["LLMs", "Prompt Engineering", "NLP", "Software Design"],
   },
   {
-    title: "Local LLM Server & RAG Stack",
-    blurb: "Private AI infrastructure with local inference and retrieval-augmented generation.",
-    repoUrl: "https://github.com/yourhandle/rag-stack",
+    title: "Local LLM Infrastructure",
+    blurb: "Self-hosted language model infrastructure for local inference and deployment.",
+    repoUrl: "https://github.com/j-sobrino/local-llm",
     image: projectOpenWebUI,
     details:
-      "Built a secure, self-hosted LLM backend with Ollama + Docker for SMEs, integrating local RAG capabilities. Prioritized data privacy and on-prem control.",
-    stack: ["Ollama", "Docker", "LLMs", "TypeScript", "RAG"],
+    "Part of my early journey into LLM infrastructure — understanding deployment, serving, and integration. Built a self-hosted language model stack with Ollama (Docker-based, GPU-enabled), exposing it via HTTP API and connecting to frontends like OpenWebUI and Langflow. Features include model selection, wake-on-LAN server activation, local network API exposure, and optional cloud deployment using RunPod. Focused on learning end-to-end flow, API processing, backend hosting alternatives to OpenAI, and gaining practical skills in GPU setup and deployment.",
+    stack: ["Ollama", "Docker", "LLMs", "GPU", "API"],
   },
   {
     title: "ReRoute — Health-First Navigation App",
     blurb: "Award-winning app promoting walkable commutes.",
-    websiteUrl: "https://reroute-app.netlify.app",
+    repoUrl: "https://gitlab.doc.ic.ac.uk/pp1523/drping",
+    websiteUrl: "https://pp1523.pages.doc.ic.ac.uk/drping/",
     image: projectReRoute,
     details:
-      "Led UI/UX design for a navigation app encouraging walking to combat prediabetes. Informed by 50+ user interviews. Won Imperial’s 2nd Year Project competition + Amadeus Prize.",
-    stack: ["Figma", "React Native", "User Research", "HealthTech"],
+      "Led UI/UX design for ReRoute, a health-focused navigation app to combat rising prediabetes rates. Conducted 50+ user interviews in London to inform design decisions. Applied user-centered design principles with rapid iteration, thin slicing, and prototyping. Won the Amadeus Prize for Best Project and selected by Amazon for mentorship.",
+    stack: ["React Native", "User Research", "User-Centered Design", "Prototyping"],
     award: "1st Place - Imperial 2nd Year Project + Amadeus Prize",
   },
   {
     title: "Osstrack — Bone Health with Ultrasound AI",
     blurb: "Hackathon-winning tool to assess osteoporosis risk using ultrasound and ML.",
-    websiteUrl: "https://osstrack.ai",
+    websiteUrl: "https://osstrackhealth.com",
     image: projectOsstrack,
     details:
       "Built a deep-learning diagnostic interface using ultrasound images to assess bone density. Won Longevity x AI hackathon. Designed UI with Cursor AI and Lovable.",
@@ -109,9 +110,9 @@ export const projects: ProjectItem[] = [
 export const education = [
   {
     school: "Imperial College London",
-    degree: "MEng Mathematics and Computer Science",
-    period: "2023 – 2027",
-    notes: "First Class Honours. Modules: Graphs & Algorithms, SE Design, Symbolic Reasoning, Operating Systems.",
+    degree: "BEng Mathematics and Computer Science",
+    period: "2023 – 2026",
+    notes: "First Class Honours. Modules: Graphs & Algorithms, SWE Design, Symbolic Reasoning, Operating Systems, AI, and more.",
     logo: imperialLogo,
   },
   {
@@ -122,18 +123,7 @@ export const education = [
     logo: googleLogo,
     link: "https://developers.google.com/machine-learning/crash-course",
   },
-  {
-    school: "British Council School of Madrid",
-    degree: "Título de Bachiller",
-    period: "2021 – 2023",
-    notes: "9.9 GPA. 6 Honours. Finalist in Declamation contest on AI & digital ethics.",
-  },
-  {
-    school: "Mathematical Thinking School Miguel de Guzmán (EPM)",
-    degree: "Advanced Math Programme",
-    period: "2012 – 2023",
-    notes: "Weekly math lectures, robotics labs, ethical hacking course.",
-  },
+
 ];
 
 export const languages = [
@@ -174,7 +164,7 @@ export const volunteering = [
   {
     title: "President, Imperial Spanish Society",
     period: "2025 – 2026",
-    details: "Led 200+ member society. Coordinated events, sponsorships, and engagement.",
+    details: "Leading a 200+ member society. Coordinating events, sponsorships, and engagement.",
   },
   {
     title: "Volunteering in Chame, Panama (ONGVoluntariado)",
