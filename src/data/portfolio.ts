@@ -67,6 +67,7 @@ export const projects: ProjectItem[] = [
   {
     title: "DSL AI — Natural Language Interface for building Financial Products",
     blurb: "LLM-driven tooling for designing financial products in natural language.",
+    repoUrl: "https://github.com/j-sobrino/dsl-ai",
     image: projectStudy,
     details:
       "Prototyping an AI-powered platform that converts structured English into DSL code for financial product configuration. Targeting faster iteration, documentation, and testing.",
