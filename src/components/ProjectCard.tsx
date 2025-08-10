@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github, Globe } from "lucide-react";
 import type { ProjectItem } from "@/data/portfolio";
 
 interface ProjectCardProps {
@@ -61,12 +61,23 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
               </span>
             ))}
           </div>
-          <div className="flex justify-end">
-            <Button asChild>
-              <a href={project.repoUrl} target="_blank" rel="noreferrer noopener" aria-label={`Open repository for ${project.title}`}>
-                View Code <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
+          <div className="flex justify-end gap-2">
+            {project.websiteUrl && (
+              <Button variant="outline" asChild>
+                <a href={project.websiteUrl} target="_blank" rel="noreferrer noopener" aria-label={`Visit ${project.title} website`}>
+                  <Globe className="h-4 w-4" />
+                  Website
+                </a>
+              </Button>
+            )}
+            {project.repoUrl && (
+              <Button asChild>
+                <a href={project.repoUrl} target="_blank" rel="noreferrer noopener" aria-label={`Open repository for ${project.title}`}>
+                  <Github className="h-4 w-4" />
+                  Code
+                </a>
+              </Button>
+            )}
           </div>
         </div>
       </DialogContent>

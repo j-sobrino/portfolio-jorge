@@ -53,11 +53,22 @@ export const experience = [
   },
 ];
 
-export const projects = [
+export interface ProjectItem {
+  title: string;
+  blurb: string;
+  repoUrl?: string;
+  websiteUrl?: string;
+  image: string;
+  details: string;
+  stack: string[];
+}
+
+export const projects: ProjectItem[] = [
   {
     title: "DSL AI — Natural Language Interface for Financial DSLs",
     blurb: "LLM-driven tooling for designing financial products in natural language.",
     repoUrl: "https://github.com/yourhandle/dsl-ai",
+    websiteUrl: "https://dsl-ai-demo.vercel.app",
     image: projectStudy,
     details:
       "Prototyping an AI-powered platform that converts structured English into DSL code for financial product configuration. Targeting faster iteration, documentation, and testing.",
@@ -84,7 +95,7 @@ export const projects = [
   {
     title: "Osstrack — Bone Health with Ultrasound AI",
     blurb: "Hackathon-winning tool to assess osteoporosis risk using ultrasound and ML.",
-    repoUrl: "https://github.com/yourhandle/osstrack",
+    websiteUrl: "https://osstrack.ai",
     image: projectOsstrack,
     details:
       "Built a deep-learning diagnostic interface using ultrasound images to assess bone density. Won Longevity x AI hackathon. Designed UI with Cursor AI and Lovable.",
