@@ -3,7 +3,7 @@
 export const profile = {
   name: "Jorge Sobrino Fernández-Miranda",
   role: "MEng Maths & CS @ Imperial",
-  tagline: "Focused on large language models and building AI-powered tools. Seeking to make a career in LLM technology.",
+  tagline: "Computer engineering and Mathematics background, now breaking into AI tooling. Focused on large language models and building AI-powered tools.",
   location: "London, UK",
   links: {
     github: "https://github.com/yourhandle",
