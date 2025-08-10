@@ -29,14 +29,13 @@ export const profileImage = profilePhoto;
 export const experience = [
   {
     company: "Thought Machine",
-    role: "Software Engineering Intern — Vault Bridge Team",
+    role: "Software Engineering Intern",
     period: "Jul 2025 – Sep 2025",
     logo: thoughtMachineLogo,
     points: [
-      "Developed an end-to-end data pipeline using Kafka, ElasticSearch, Go, and gRPC.",
-      "Enabled 250M+ accounts to be queried via a new Rich Query API.",
-      "Shipped Bridge API and index migration tooling with Kubernetes deployment.",
-      "Accelerated Vault’s ecosystem by unblocking integrations and advanced user journeys.",
+      "Developing an end-to-end data pipeline: consumed Kafka event streams, indexed Vault data in ElasticSearch, and exposed low-latency query endpoints over gRPC.",
+      "Enabling flexible data search of 250M+ bank accounts.",
+      "Designing and deploying a new API ensuring compatibility with the high-performance production systems.",
     ],
   },
   {
@@ -68,8 +67,6 @@ export const projects: ProjectItem[] = [
   {
     title: "DSL AI — Natural Language Interface for building Financial Products",
     blurb: "LLM-driven tooling for designing financial products in natural language.",
-    repoUrl: "https://github.com/yourhandle/dsl-ai",
-    websiteUrl: "https://dsl-ai-demo.vercel.app",
     image: projectStudy,
     details:
       "Prototyping an AI-powered platform that converts structured English into DSL code for financial product configuration. Targeting faster iteration, documentation, and testing.",
