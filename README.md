@@ -80,7 +80,7 @@ This project is configured for automatic deployment to GitHub Pages. Follow thes
    npm run deploy
    ```
 
-Your site will be available at: `https://<your-username>.github.io/portfolio-jorge2/`
+Your site will be available at: `https://<your-username>.github.io/portfolio-jorge/`
 
 ### Option 2: Lovable
 
