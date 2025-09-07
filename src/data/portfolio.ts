@@ -3,7 +3,7 @@
 export const profile = {
   name: "Jorge Sobrino Fernández-Miranda",
   role: "BEng Maths & CS @ Imperial",
-  tagline: "Computer Engineering and Mathematics background, now breaking into AI tooling. Focused on large language models and building AI-powered tools.",
+  tagline: "Mathematics & Computer Engineering student at Imperial College London with a strong foundation in software engineering. Experience building data pipelines, APIs, and user-focused tools, and eager to apply these skills in impactful SWE roles.",
   location: "London, UK",
   links: {
     github: "https://github.com/yourhandle",
