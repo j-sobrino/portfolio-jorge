@@ -108,8 +108,8 @@ export const projects: ProjectItem[] = [
 export const education = [
   {
     school: "Imperial College London",
-    degree: "BEng Mathematics and Computer Science",
-    period: "2023 – 2026",
+    degree: "MEng Mathematics and Computer Science",
+    period: "2023 – 2027",
     notes: "First Class Honours. Modules: Graphs & Algorithms, SWE Design, Symbolic Reasoning, Operating Systems, AI, and more.",
     logo: imperialLogo,
   },
