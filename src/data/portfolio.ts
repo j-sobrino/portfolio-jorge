@@ -15,7 +15,6 @@ export const profile = {
 import thoughtMachineLogo from "@/assets/thought-machine-logo.png";
 import bitcodeLogo from "@/assets/bitcode-logo.png";
 import imperialLogo from "@/assets/imperial-logo.png";
-import googleLogo from "@/assets/google-logo.png";
 import profilePhoto from "@/assets/foto-jorge.jfif";
 import projectStudy from "@/assets/project-study-planner.jpg";
 import projectBanking from "@/assets/project-mobile-banking.jpg";
@@ -103,6 +102,15 @@ export const projects: ProjectItem[] = [
     stack: ["Deep Learning", "Python", "Cursor AI", "Lovable", "UX Design"],
     award: "1st Place - Longevity x AI Hackathon",
   },
+  {
+    title: "Trading Desk Sentiment Pipeline — Onyx Assessment Centre",
+    blurb: "Three-stage pipeline extracting quotes and sentiment from trading desk chat, correlated against price signals.",
+    repoUrl: "https://github.com/j-sobrino/onyx-assessment-centre",
+    image: "/placeholder.svg",
+    details:
+      "Take-home assessment for Onyx. Built a pipeline that extracts price quotes from trading desk messages with an LLM, classifies 29,000 messages across 65 trading days as bullish/bearish/neutral (Claude Haiku, validated at 90% agreement against Claude Sonnet), and correlates the resulting daily sentiment index against commodity price returns, surfacing a statistically significant lag-1 relationship.",
+    stack: ["LLMs", "Python", "Pandas", "Time Series", "Data Pipelines"],
+  },
 ];
 
 export const education = [
@@ -113,15 +121,6 @@ export const education = [
     notes: "First Class Honours. Modules: Graphs & Algorithms, SWE Design, Symbolic Reasoning, Operating Systems, AI, and more.",
     logo: imperialLogo,
   },
-  {
-    school: "Google",
-    degree: "Machine Learning Course",
-    period: "2024",
-    notes: "Completed to learn the mathematical foundations and theoretical background behind large language models.",
-    logo: googleLogo,
-    link: "https://developers.google.com/machine-learning/crash-course",
-  },
-
 ];
 
 export const languages = [
