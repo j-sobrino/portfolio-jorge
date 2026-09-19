@@ -12,14 +12,12 @@ export const profile = {
   },
 };
 
+import squarepointLogo from "@/assets/squarepoint-logo.jpg";
 import thoughtMachineLogo from "@/assets/thought-machine-logo.png";
 import bitcodeLogo from "@/assets/bitcode-logo.png";
 import imperialLogo from "@/assets/imperial-logo.png";
 import googleLogo from "@/assets/google-logo.png";
 import profilePhoto from "@/assets/foto-jorge.jfif";
-import projectStudy from "@/assets/project-study-planner.jpg";
-import projectBanking from "@/assets/project-mobile-banking.jpg";
-import projectChat from "@/assets/project-realtime-chat.jpg";
 import projectOpenWebUI from "@/assets/open-webui-home.png";
 import projectReRoute from "@/assets/reroute.png";
 import projectOsstrack from "@/assets/osstrack.png";
@@ -27,6 +25,17 @@ import projectOsstrack from "@/assets/osstrack.png";
 export const profileImage = profilePhoto;
 
 export const experience = [
+  {
+    company: "Squarepoint Capital LLP",
+    role: "Software Developer Intern",
+    period: "Jun 2026 – Sep 2026",
+    logo: squarepointLogo,
+    points: [
+      "Built a system that enforced engineering standards across the company: connected to external systems and evaluated checks against them.",
+      "Surfaced results in a way teams could act on, designed to extend to new systems and checks without core changes, scaling to 2,000+ entities across the firm's service catalog.",
+      "Profiled the system's I/O, compute, and memory usage to find and fix performance bottlenecks, cutting evaluation time from 17s to 1s.",
+    ],
+  },
   {
     company: "Thought Machine",
     role: "Software Engineering Intern",
@@ -64,15 +73,6 @@ export interface ProjectItem {
 }
 
 export const projects: ProjectItem[] = [
-  {
-    title: "DSL AI — Natural Language Interface for building Financial Products",
-    blurb: "LLM-driven tooling for designing financial products in natural language.",
-    repoUrl: "https://github.com/j-sobrino/dsl-ai",
-    image: projectStudy,
-    details:
-      "Prototyping an AI-powered platform that converts structured English into DSL code for financial product configuration. Targeting faster iteration, documentation, and testing.",
-    stack: ["LLMs", "Prompt Engineering", "NLP", "Software Design"],
-  },
   {
     title: "Local LLM Infrastructure",
     blurb: "Self-hosted language model infrastructure for local inference and deployment.",
@@ -155,6 +155,12 @@ export const awards = [
     org: "RSME",
     date: "June 2023",
     details: "Top ranking in problem-solving (algebra, combinatorics, geometry).",
+  },
+  {
+    title: "3rd Place, Spanish U18 Athletics Championship (Huelva)",
+    org: "RFEA",
+    date: "2021",
+    details: "3rd place in the U-18 National Championships 4x100m relay, representing E.A. Majadahonda.",
   },
 ];
 
