@@ -30,7 +30,7 @@ export const experience = [
     period: "Jun 2026 – Sep 2026",
     logo: squarepointLogo,
     points: [
-      "Built a system that enforced engineering standards across the company: connected to external systems and evaluated checks against them.",
+      "Built a system that tracked standard adherence and migration progress across the company.",
       "Surfaced results in a way teams could act on, designed to extend to new systems and checks without core changes, scaling to 2,000+ entities across the firm's service catalog.",
       "Profiled the system's I/O, compute, and memory usage to find and fix performance bottlenecks, cutting evaluation time from 17s to 1s.",
     ],
