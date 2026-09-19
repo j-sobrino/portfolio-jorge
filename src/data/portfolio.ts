@@ -12,6 +12,7 @@ export const profile = {
   },
 };
 
+import squarepointLogo from "@/assets/squarepoint-logo.jpg";
 import thoughtMachineLogo from "@/assets/thought-machine-logo.png";
 import bitcodeLogo from "@/assets/bitcode-logo.png";
 import imperialLogo from "@/assets/imperial-logo.png";
@@ -28,6 +29,7 @@ export const experience = [
     company: "Squarepoint Capital LLP",
     role: "Software Developer Intern",
     period: "Jun 2026 – Sep 2026",
+    logo: squarepointLogo,
     points: [
       "Built a system that enforced engineering standards across the company: connected to external systems and evaluated checks against them.",
       "Surfaced results in a way teams could act on, designed to extend to new systems and checks without core changes, scaling to 2,000+ entities across the firm's service catalog.",
