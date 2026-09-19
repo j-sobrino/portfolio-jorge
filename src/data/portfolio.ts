@@ -73,13 +73,13 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
-    title: "Local LLM Infrastructure",
-    blurb: "Self-hosted language model infrastructure for local inference and deployment.",
-    repoUrl: "https://github.com/j-sobrino/local-llm",
-    image: projectOpenWebUI,
+    title: "Trading Desk Sentiment Pipeline — Onyx Assessment Centre",
+    blurb: "Three-stage pipeline extracting quotes and sentiment from trading desk chat, correlated against price signals.",
+    repoUrl: "https://github.com/j-sobrino/onyx-assessment-centre",
+    image: "/placeholder.svg",
     details:
-    "Part of my early journey into LLM infrastructure — understanding deployment, serving, and integration. Built a self-hosted language model stack with Ollama (Docker-based, GPU-enabled), exposing it via HTTP API and connecting to frontends like OpenWebUI and Langflow. Features include model selection, wake-on-LAN server activation, local network API exposure, and optional cloud deployment using RunPod. Focused on learning end-to-end flow, API processing, backend hosting alternatives to OpenAI, and gaining practical skills in GPU setup and deployment.",
-    stack: ["Ollama", "Docker", "LLMs", "GPU", "API"],
+      "Take-home assessment for Onyx. Built a pipeline that extracts price quotes from trading desk messages with an LLM, classifies 29,000 messages across 65 trading days as bullish/bearish/neutral (Claude Haiku, validated at 90% agreement against Claude Sonnet), and explores correlations between the resulting daily sentiment index and commodity price returns.",
+    stack: ["LLMs", "Python", "Pandas", "Time Series", "Data Pipelines"],
   },
   {
     title: "ReRoute — Health-First Navigation App",
@@ -103,13 +103,13 @@ export const projects: ProjectItem[] = [
     award: "1st Place - Longevity x AI Hackathon",
   },
   {
-    title: "Trading Desk Sentiment Pipeline — Onyx Assessment Centre",
-    blurb: "Three-stage pipeline extracting quotes and sentiment from trading desk chat, correlated against price signals.",
-    repoUrl: "https://github.com/j-sobrino/onyx-assessment-centre",
-    image: "/placeholder.svg",
+    title: "Local LLM Infrastructure",
+    blurb: "Self-hosted language model infrastructure for local inference and deployment.",
+    repoUrl: "https://github.com/j-sobrino/local-llm",
+    image: projectOpenWebUI,
     details:
-      "Take-home assessment for Onyx. Built a pipeline that extracts price quotes from trading desk messages with an LLM, classifies 29,000 messages across 65 trading days as bullish/bearish/neutral (Claude Haiku, validated at 90% agreement against Claude Sonnet), and correlates the resulting daily sentiment index against commodity price returns, surfacing a statistically significant lag-1 relationship.",
-    stack: ["LLMs", "Python", "Pandas", "Time Series", "Data Pipelines"],
+    "Part of my early journey into LLM infrastructure — understanding deployment, serving, and integration. Built a self-hosted language model stack with Ollama (Docker-based, GPU-enabled), exposing it via HTTP API and connecting to frontends like OpenWebUI and Langflow. Features include model selection, wake-on-LAN server activation, local network API exposure, and optional cloud deployment using RunPod. Focused on learning end-to-end flow, API processing, backend hosting alternatives to OpenAI, and gaining practical skills in GPU setup and deployment.",
+    stack: ["Ollama", "Docker", "LLMs", "GPU", "API"],
   },
 ];
 
